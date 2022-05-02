@@ -1,16 +1,13 @@
 import React from 'react';
 
-import ButtonBox from "../ButtonBox/ButtonBox";
 import './Wrapper.css';
+import ButtonBox from "../ButtonBox/ButtonBox";
+import Screen from "../Screen/Screen";
 
-const Wrapper = (): JSX.Element => {
-  const bomba = 123;
-
-  return (
-    <div className="wrapper">
-      <ButtonBox />
-    </div>
-  );
-};
+const Wrapper = (): JSX.Element =>
+  <div className="wrapper">
+    <Screen />
+    <ButtonBox />
+  </div>
 
 export default Wrapper;

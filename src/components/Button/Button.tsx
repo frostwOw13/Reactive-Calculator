@@ -9,7 +9,7 @@ interface Props {
 
 const Button: React.FC<Props> = ({ handleClick, symbol }): JSX.Element =>
   <button
-    className="button"
+    className={`button${symbol === '=' ? ' equal' : ''}`}
     onClick={() => handleClick(symbol)}
     type="button">
       {symbol}
