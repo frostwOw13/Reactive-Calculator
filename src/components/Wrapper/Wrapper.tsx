@@ -9,10 +9,10 @@ let operands: Array<string> = [];
 
 const Wrapper = (): JSX.Element => {
   const [textToShow, setTextToShow] = useState<string>('');
+  const [upperTextToShow, setUpperTextToShow] = useState<string>('');
 
   function calculate(): any {
     let result = Number(numbers[0]);
-    console.log(numbers);
     for (let i = 0; i < operands.length; i += 1) {
       switch (operands[i]) {
         case '%':
@@ -42,23 +42,42 @@ const Wrapper = (): JSX.Element => {
       setTextToShow(t => t + symbol.toString());
     } else if (!Number.isInteger(symbol)) {
       if (symbol.toString() !== '=') {
-        if (textToShow) numbers.push(textToShow);
+        if (textToShow) {
+          numbers.push(textToShow);
+          setUpperTextToShow(u => `${u + textToShow} `);
+        }
         setTextToShow('');
-        if (!Number.isNaN(Number(numbers[0]))) operands.push(symbol.toString());
+        if (!Number.isNaN(Number(numbers[0]))) {
+          operands.push(symbol.toString());
+          setUpperTextToShow(u => `${u + symbol.toString()} `);
+        }
       } else {
-        numbers.push(textToShow);
+        if (textToShow) numbers.push(textToShow);
+        if (operands.length >= numbers.length) {
+          operands.pop();
+          setUpperTextToShow(u => {
+            const arr = u.split('');
+            arr.splice(-2).join('')
+            return `${arr.join('')} =`;
+          });
+        } else {
+          setUpperTextToShow(u => `${u + textToShow} ${symbol.toString()}`)
+        }
         setTextToShow(calculate().toString());
+        numbers = [];
+        operands = [];
       }
     }
     if (symbol === 'C') {
       numbers = [];
       operands = [];
+      setUpperTextToShow('');
     }
   }, [textToShow]);
 
   return (
     <div className="wrapper">
-      <Screen expression={textToShow}/>
+      <Screen addExpression={upperTextToShow} expression={textToShow} />
       <ButtonBox handleClick={handleClick}/>
     </div>
   )
