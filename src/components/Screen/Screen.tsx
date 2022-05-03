@@ -3,7 +3,7 @@ import React from 'react';
 import './Screen.css';
 
 interface Props {
-  expression: string
+  expression: string | number
 }
 
 const Screen: React.FC<Props> = ({ expression }): JSX.Element =>

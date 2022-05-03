@@ -1,9 +1,13 @@
-import React, {useCallback} from 'react';
+import React from 'react';
 
 import Button from "../Button/Button";
 import './ButtonBox.css';
 
-const ButtonBox: React.FC = (): JSX.Element => {
+interface Props {
+  handleClick: (symbol: number | string) => void
+}
+
+const ButtonBox: React.FC<Props> = ({ handleClick }): JSX.Element => {
   const buttonSymbols = [
     ["C", "+-", "%", "/"],
     [7, 8, 9, "X"],
@@ -11,8 +15,6 @@ const ButtonBox: React.FC = (): JSX.Element => {
     [1, 2, 3, "+"],
     [0, ".", "="],
   ]
-
-  const handleClick = useCallback((symbol: number | string): any => console.log(symbol), []);
 
   return (
     <div className="button-box">
