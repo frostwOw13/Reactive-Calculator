@@ -9,7 +9,7 @@ interface Props {
 
 const ButtonBox: React.FC<Props> = ({ handleClick }): JSX.Element => {
   const buttonSymbols = [
-    ["C", "+-", "%", "/"],
+    ["C", "CE", "%", "/"],
     [7, 8, 9, "X"],
     [4, 5, 6, "-"],
     [1, 2, 3, "+"],
