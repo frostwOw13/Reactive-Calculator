@@ -1,11 +1,11 @@
 .button {
-  border: none;
   background-color: rgb(80, 60, 209);
-  font-size: 24px;
-  color: rgb(255, 255, 255);
-  font-weight: bold;
-  cursor: pointer;
+  border: none;
   border-radius: 10px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
   outline: none;
 }
 
@@ -14,8 +14,8 @@ button:hover {
 }
 
 .equal {
-  grid-column: 3 / 5;
   background-color: #f33d1d;
+  grid-column: 3 / 5;
 }
 
 .equal:hover {
