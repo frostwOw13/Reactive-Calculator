@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/reactive-calculator/static/css/main.0b79d2c8.chunk.css",
+    "main.js": "/reactive-calculator/static/js/main.c2c2afe6.chunk.js",
+    "main.js.map": "/reactive-calculator/static/js/main.c2c2afe6.chunk.js.map",
+    "runtime-main.js": "/reactive-calculator/static/js/runtime-main.e431f10b.js",
+    "runtime-main.js.map": "/reactive-calculator/static/js/runtime-main.e431f10b.js.map",
+    "static/js/2.dae4e7da.chunk.js": "/reactive-calculator/static/js/2.dae4e7da.chunk.js",
+    "static/js/2.dae4e7da.chunk.js.map": "/reactive-calculator/static/js/2.dae4e7da.chunk.js.map",
+    "index.html": "/reactive-calculator/index.html",
+    "static/css/main.0b79d2c8.chunk.css.map": "/reactive-calculator/static/css/main.0b79d2c8.chunk.css.map",
+    "static/js/2.dae4e7da.chunk.js.LICENSE.txt": "/reactive-calculator/static/js/2.dae4e7da.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e431f10b.js",
+    "static/js/2.dae4e7da.chunk.js",
+    "static/css/main.0b79d2c8.chunk.css",
+    "static/js/main.c2c2afe6.chunk.js"
+  ]
+}
